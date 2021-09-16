@@ -26,7 +26,7 @@ namespace BlockchainTechnology
             var concatenated = Leaves.Count > 0
                 ? string.Join("", Leaves.Select(x => x.Hash()))
                 : LeftMerkleTree.ComputeDigest() + RightMerkleTree.ComputeDigest();
-            
+
             return string.Concat(Array.ConvertAll(
                 hashing.ComputeHash(Encoding.UTF8.GetBytes(concatenated)),
                 x => x.ToString("X2")));
@@ -40,10 +40,13 @@ namespace BlockchainTechnology
 
         public void PrintTree(int depth = 0)
         {
-            LeftMerkleTree?.PrintTree(depth+1);
-            RightMerkleTree?.PrintTree(depth+1);
-
-            Console.WriteLine($"[Depth {depth}] Hash: {ComputeDigest()}");
+            Console.WriteLine(new string('-', depth) + $"[Depth {depth}] Hash: {ComputeDigest()}" +
+                           (Leaves.Count > 0
+                               ? " - " + Leaves.Select(x => x.Data)
+                                   .Aggregate((current, next) => current + ", " + next)
+                               : ""));
+            LeftMerkleTree?.PrintTree(depth + 1);
+            RightMerkleTree?.PrintTree(depth + 1);
         }
     }
 }
