@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockchainTechnology", "BlockchainTechnology\BlockchainTechnology.csproj", "{BF899E35-9CF7-47B4-AAC1-E5D0F3549663}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerkleTrees", "MerkleTrees\MerkleTrees.csproj", "{BF899E35-9CF7-47B4-AAC1-E5D0F3549663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfWork", "ProofOfWork\ProofOfWork.csproj", "{9E3BE0A8-15EC-4F0B-9A14-755C98090674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{BF899E35-9CF7-47B4-AAC1-E5D0F3549663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF899E35-9CF7-47B4-AAC1-E5D0F3549663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF899E35-9CF7-47B4-AAC1-E5D0F3549663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3BE0A8-15EC-4F0B-9A14-755C98090674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3BE0A8-15EC-4F0B-9A14-755C98090674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3BE0A8-15EC-4F0B-9A14-755C98090674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3BE0A8-15EC-4F0B-9A14-755C98090674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
