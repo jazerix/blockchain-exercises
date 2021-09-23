@@ -1,0 +1,10 @@
+﻿version: "3.4"
+services:
+  bitcoind:
+    build: .
+    ports:
+      - "18444:18444"
+      - "18443:18443"
+    dns:
+      - 8.8.8.8
+      
