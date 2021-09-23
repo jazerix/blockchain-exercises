@@ -13,15 +13,15 @@ namespace Proof_of_Work
             for (var i = 0; i < 15; i++)
                 strings.Add(RandomString());
 
-            HashCollision h = new HashCollision()
+            var h = new HashCollision()
             {
-                Target = "0000000000000000"
+                Target = "0000000000000"
             };
-            List<TimeSpan> elapsed = new List<TimeSpan>();
+            var elapsed = new List<TimeSpan>();
 
             foreach (var s in strings)
             {
-                Stopwatch sw = new Stopwatch();
+                var sw = new Stopwatch();
                 sw.Start();
                 h.Collide(s);
                 sw.Stop();
@@ -29,12 +29,12 @@ namespace Proof_of_Work
                 Console.WriteLine($"Solution found for: {s}, took {sw.Elapsed.TotalSeconds} seconds");
             }
 
-            double average = elapsed.Average(x => x.TotalSeconds);
+            var average = elapsed.Average(x => x.TotalSeconds);
 
             Console.WriteLine($"Average time: {average} seconds");
         }
 
-        public static string RandomString()
+        private static string RandomString()
         {
             var random = new Random();
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

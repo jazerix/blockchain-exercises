@@ -19,7 +19,7 @@ namespace Proof_of_Work
 
         private bool TargetReached(string input)
         {
-            var encoded = new List<Byte>(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(input)));
+            var encoded = new List<byte>(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(input)));
             var bitString = string.Join("", encoded.Select(x => Convert.ToString(x, 2).PadLeft(8, '0')));
             
             return Target == bitString[..Target.Length];
