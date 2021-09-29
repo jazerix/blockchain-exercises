@@ -1,7 +1,6 @@
-﻿using System.Runtime.Serialization;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace Assignment1
+namespace Assignment1.Response
 {
     public class GetNewAddress
     {

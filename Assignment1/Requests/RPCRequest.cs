@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Assignment1.Requests
 {
-    public class RPCRequest
+    public class RpcRequest
     {
         [JsonPropertyName("jsonrpc")]
         public string JsonRpc { get; set; } = "1.0";
@@ -14,10 +14,11 @@ namespace Assignment1.Requests
         [JsonPropertyName("method")]
         public string Method { get; set; }
 
-        public string[] Params { get; set; }
+        [JsonPropertyName("params")]
+        public object[] Params { get; set; }
 
 
-        public RPCRequest(string method, params string[] @params)
+        public RpcRequest(string method, params object[] @params)
         {
             Method = method;
             Params = @params;

@@ -1,11 +1,12 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Assignment1.Response
 {
-    public class GetBalance
+    public class SendBitcoin
     {
         [JsonPropertyName("result")]
-        public decimal Result { get; set; }
+        public string Result { get; set; }
 
         [JsonPropertyName("error")]
         public string Error { get; set; }

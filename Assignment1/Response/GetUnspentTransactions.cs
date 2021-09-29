@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Assignment1
+namespace Assignment1.Response
 {
     public class GetUnspentTransactions
     {

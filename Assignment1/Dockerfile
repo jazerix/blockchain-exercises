@@ -10,4 +10,4 @@ RUN cd home
 
 RUN tar -xvzf home/bitcoin-core.tar.gz -C /home
 
-ENTRYPOINT ["./home/bitcoin-0.21.1/bin/bitcoind","-regtest", "-rpcuser=user", "-rpcpassword=secret", "-rpcbind=0.0.0.0", "-rpcallowip=0.0.0.0/0"]
+ENTRYPOINT ["./home/bitcoin-0.21.1/bin/bitcoind","-regtest", "-rpcuser=user", "-rpcpassword=secret", "-rpcbind=0.0.0.0", "-rpcallowip=0.0.0.0/0", "-fallbackfee=0.00005"]
